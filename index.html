@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICT Club - Welcome</title>
+<style>
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Background Styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url('https://source.unsplash.com/1600x900/?technology,computer'); /* Background related to ICT */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        overflow: hidden;
+    }
+
+    /* Overlay for Background Effect */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        z-index: 1;
+    }
+
+    /* Logo Styling */
+    .logo {
+        font-size: 60px;
+        color: #0db9f0;
+        font-weight: bold;
+        text-shadow: 3px 3px #004466, 5px 5px 15px rgba(0, 0, 0, 0.6);
+        margin-bottom: 20px;
+        animation: pulse 1.5s infinite;
+        letter-spacing: 3px;
+    }
+
+    /* Title Styling */
+    .title {
+        font-size: 48px;
+        color: #00e6ff;
+        font-weight: bold;
+        text-shadow: 2px 2px #333, 4px 4px 10px rgba(0, 0, 0, 0.6);
+        margin-bottom: 10px;
+        animation: fadeIn 2s ease-in;
+    }
+
+    /* Welcome Text */
+    .welcome-text {
+        font-size: 28px;
+        color: #ffffff;
+        text-shadow: 1px 1px 2px #222, 2px 2px 12px rgba(0, 0, 0, 0.6);
+        margin-bottom: 30px;
+        animation: fadeIn 2s ease-in;
+        animation-delay: 1s;
+    }
+
+    /* Loading Circle Animation */
+    .loading-circle {
+        border: 8px solid rgba(255, 255, 255, 0.2);
+        border-top: 8px solid #00e6ff;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin-top: 20px;
+        animation: spin 1.5s linear infinite;
+        box-shadow: 0 0 15px #00e6ff, 0 0 25px #00e6ff inset;
+    }
+
+    /* Animations */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(-10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Decorative Particles for Background Effect */
+    .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .particle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #00e6ff;
+        border-radius: 50%;
+        opacity: 0.7;
+        animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); opacity: 0.7; }
+        50% { transform: translateY(-50px); opacity: 0.3; }
+        100% { transform: translateY(0); opacity: 0.7; }
+    }
+</style>
+</head>
+<body>
+
+<div class="overlay">
+    <div class="logo">ICT CLUB</div>
+    <div class="title">ODA SBS</div>
+    <div class="welcome-text">WELCOME TO ICT CLUB.</div>
+    <div class="loading-circle"></div>
+</div>
+
+<!-- Decorative Particles -->
+<div class="particles">
+    <!-- Generate multiple particles for decoration -->
+    <div class="particle" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+    <div class="particle" style="top: 30%; left: 80%; animation-delay: 1s;"></div>
+    <div class="particle" style="top: 50%; left: 40%; animation-delay: 2s;"></div>
+    <div class="particle" style="top: 70%; left: 10%; animation-delay: 3s;"></div>
+    <div class="particle" style="top: 90%; left: 60%; animation-delay: 4s;"></div>
+    <div class="particle" style="top: 20%; left: 70%; animation-delay: 1.5s;"></div>
+    <div class="particle" style="top: 80%; left: 30%; animation-delay: 2.5s;"></div>
+    <div class="particle" style="top: 60%; left: 50%; animation-delay: 3.5s;"></div>
+</div>
+
+<script>
+    // Redirect to home.html after 7 seconds
+    setTimeout(() => {
+        window.location.href = 'home.html';
+    }, 7000);
+</script>
+
+</body>
+</html>
